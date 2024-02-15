@@ -3,6 +3,14 @@
 {% block content %}
 {{ section.content | safe }}
 
+{% set blog_section = get_section(path="blog/_index.md") %}
+{% for post in blog_section.pages %}
+<h2>Latest Posts</h2>
+<ul>
+    <li><a href="{{ post.permalink | safe }}">{{ post.title }}</a></li>
+</ul>
+{% endfor %}
+
 {% if config.extra.list_pages %}
 
 {% if paginator %}

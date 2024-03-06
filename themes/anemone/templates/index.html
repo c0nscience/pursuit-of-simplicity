@@ -4,10 +4,10 @@
 {{ section.content | safe }}
 
 {% set blog_section = get_section(path="blog/_index.md") %}
-{% for post in blog_section.pages %}
 <h2>Latest Posts</h2>
+{% for post in blog_section.pages %}
 <ul>
-    <li><a href="{{ post.permalink | safe }}">{{ post.title }}</a></li>
+  <li><a href="{{ post.permalink | safe }}">{{ post.title }}</a></li>
 </ul>
 {% endfor %}
 
@@ -20,17 +20,20 @@
 {% endif %}
 
 <ul class="titleList">
-{% for page in pages %}
+  {% for page in pages %}
   <li>
     <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
     <br />
     {{ page.description }}
   </li>
-{% endfor %}
+  {% endfor %}
 </ul>
 
 {% if paginator %}
-<div class="metaData">{% if paginator.previous %}<a href="{{ paginator.first }}">⥶</a> &nbsp <a href="{{ paginator.previous }}"><</a>{% endif %} &nbsp {{ paginator.current_index }} / {{ paginator.number_pagers }} &nbsp {% if paginator.next %}<a href="{{ paginator.next }}">></a> &nbsp <a href="{{ paginator.last }}">⥸</a>{% endif %}</div>
+<div class="metaData">{% if paginator.previous %}<a href="{{ paginator.first }}">⥶</a> &nbsp <a
+    href="{{ paginator.previous }}">
+    << /a>{% endif %} &nbsp {{ paginator.current_index }} / {{ paginator.number_pagers }} &nbsp {% if paginator.next
+      %}<a href="{{ paginator.next }}">></a> &nbsp <a href="{{ paginator.last }}">⥸</a>{% endif %}</div>
 {% endif %}
 
 {% endif %}

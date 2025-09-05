@@ -9,7 +9,7 @@ theme = "anemone"
 
 taxonomies = [{ name = "tags", feed = true }]
 
-generate_feed = true
+generate_feeds = true
 
 [markdown]
 highlight_code = true

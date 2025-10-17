@@ -2,7 +2,7 @@ name: 'blog'
 
 services:
   blog:
-    image: blog:v2
+    image: blog:v4
     restart: always
     ports:
       - "8000:80"

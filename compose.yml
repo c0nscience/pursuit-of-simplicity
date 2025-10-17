@@ -1,0 +1,8 @@
+name: 'blog'
+
+services:
+  blog:
+    image: blog:v2
+    restart: always
+    ports:
+      - "8000:80"

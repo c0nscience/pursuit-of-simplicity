@@ -5,13 +5,13 @@ services:
     hostname: blog
     container_name: blog
     networks:
-      - tunnel
+      - tunnelext
     image: blog:v4
     restart: always
     ports:
       - "8000:80"
 
 networks:
-  tunnel:
+  tunnelext:
     name: tunnel
     external: true

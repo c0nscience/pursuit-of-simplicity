@@ -2,7 +2,15 @@ name: 'blog'
 
 services:
   blog:
+    container_name: blog
+    networks:
+      - tunnel
     image: blog:v4
     restart: always
     ports:
       - "8000:80"
+
+networks:
+  tunnel:
+    name: tunnel
+    external: true

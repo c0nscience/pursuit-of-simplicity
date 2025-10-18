@@ -2,7 +2,7 @@ name: 'blog'
 
 services:
   blog:
-    name: blog
+    hostname: blog
     container_name: blog
     networks:
       - tunnel

@@ -17,6 +17,8 @@ proxy:
   ssl: false
   host: benjamin.hrzg.org
   # Proxy connects to your container on port 80 by default.
+  healthcheck:
+    path: /
   app_port: 3001
 
 # Credentials for your image host.

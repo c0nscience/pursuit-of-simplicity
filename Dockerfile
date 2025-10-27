@@ -6,4 +6,8 @@ RUN ["zola", "build"]
 
 FROM ghcr.io/static-web-server/static-web-server:2
 WORKDIR /
+
+ENV SERVER_PORT=3001
+
+EXPOSE 3001
 COPY --from=zola /project/public /public

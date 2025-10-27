@@ -9,5 +9,6 @@ WORKDIR /
 
 ENV SERVER_PORT=3001
 
-EXPOSE 3001
 COPY --from=zola /project/public /public
+
+EXPOSE 3001
